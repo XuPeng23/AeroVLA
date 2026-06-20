@@ -1,4 +1,4 @@
-# AerialVLA: A Vision-Language-Action Model for UAV Navigation via Minimalist End-to-End Control
+# AeroVLA (formerly known as AerialVLA): A Vision-Language-Action Model for UAV Navigation via Minimalist End-to-End Control
 
 <p align="center">
   <img src="docs/assets/teaser_figure.png" width="1000" title="AerialVLA">
