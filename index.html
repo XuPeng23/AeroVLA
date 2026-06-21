@@ -27,6 +27,7 @@
       width: 100%;
       height: 100%;
     }
+    .venue-tag { margin-top: 15px; color: #b12519; font-weight: 600; }
   </style>
 </head>
 <body>
@@ -36,7 +37,10 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">AerialVLA: A Vision-Language-Action Model for UAV Navigation via Minimalist End-to-End Control</h1>
+          <h1 class="title is-1 publication-title">AeroVLA: A Vision-Language-Action Model for UAV Navigation via Minimalist End-to-End Control</h1>
+          
+          <h3 class="title is-4 venue-tag">🎉 Accepted to ECCV 2026</h3>
+          <p class="is-size-6" style="margin-bottom: 20px; color: #666;">(Formerly known as AerialVLA)</p>
           
           <div class="is-size-5 publication-authors">
             <span class="author-block">Peng Xu,</span>
@@ -79,7 +83,7 @@
         <h2 class="title is-3">Video Demonstrations</h2>
         <div class="content has-text-justified">
           <p>
-            We provide two supplementary videos demonstrating AerialVLA's performance in unconstrained 3D environments. The user interface layout visually breaks down the complete end-to-end perception-action loop:
+            We provide two supplementary videos demonstrating AeroVLA's performance in unconstrained 3D environments. The user interface layout visually breaks down the complete end-to-end perception-action loop:
           </p>
           <ul>
             <li><strong>Top:</strong> Real-time text prompt containing the fuzzy directional hint (highlighted in red) and the target description.</li>
@@ -117,7 +121,7 @@
         <h3 class="title is-4">Demo 2: Real-Time Continuous Control</h3>
         <div class="content has-text-justified">
           <p>
-            To demonstrate AerialVLA's capability for real-time continuous control, we altered the simulator environment to operate in a continuous flight mode without inference pauses. This video illustrates the policy's robustness and agility when processing dynamic inputs in real time, serving as a critical proof-of-concept for future physical deployments on edge computing devices.
+            To demonstrate AeroVLA's capability for real-time continuous control, we altered the simulator environment to operate in a continuous flight mode without inference pauses. This video illustrates the policy's robustness and agility when processing dynamic inputs in real time, serving as a critical proof-of-concept for future physical deployments on edge computing devices.
           </p>
         </div>
         <div class="video-container">
@@ -135,7 +139,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Vision-Language Navigation (VLN) for Unmanned Aerial Vehicles (UAVs) demands complex visual interpretation and continuous control in dynamic 3D environments. Existing hierarchical approaches rely on dense oracle guidance or auxiliary object detectors, creating semantic gaps and limiting genuine autonomy. We propose AerialVLA, a minimalist end-to-end Vision-Language-Action framework mapping raw visual observations and fuzzy linguistic instructions directly to continuous physical control signals. First, we introduce a streamlined dual-view perception strategy that reduces visual redundancy while preserving essential cues for forward navigation and precise grounding, which additionally facilitates future simulation-to-reality transfer. To reclaim genuine autonomy, we deploy a fuzzy directional prompting mechanism derived solely from onboard sensors, completely eliminating the dependency on dense oracle guidance. Ultimately, we formulate a unified control space that integrates continuous 3-Degree-of-Freedom (3-DoF) kinematic commands with an intrinsic landing signal, freeing the agent from external object detectors for precision landing. Extensive experiments on the TravelUAV benchmark demonstrate that AerialVLA achieves state-of-the-art performance in seen environments. Furthermore, it exhibits superior generalization in unseen scenarios by achieving nearly three times the success rate of leading baselines, validating that a minimalist, autonomy-centric paradigm captures more robust visual-motor representations than complex modular systems.
+            Vision-Language Navigation (VLN) for Unmanned Aerial Vehicles (UAVs) demands complex visual interpretation and continuous control in dynamic 3D environments. Existing hierarchical approaches rely on dense oracle guidance or auxiliary object detectors, creating semantic gaps and limiting genuine autonomy. We propose AeroVLA, a minimalist end-to-end Vision-Language-Action framework mapping raw visual observations and fuzzy linguistic instructions directly to continuous physical control signals. First, we introduce a streamlined dual-view perception strategy that reduces visual redundancy while preserving essential cues for forward navigation and precise grounding, which additionally facilitates future simulation-to-reality transfer. To reclaim genuine autonomy, we deploy a fuzzy directional prompting mechanism derived solely from onboard sensors, completely eliminating the dependency on dense oracle guidance. Ultimately, we formulate a unified control space that integrates continuous 3-Degree-of-Freedom (3-DoF) kinematic commands with an intrinsic landing signal, freeing the agent from external object detectors for precision landing. Extensive experiments on the TravelUAV benchmark demonstrate that AeroVLA achieves state-of-the-art performance in seen environments. Furthermore, it exhibits superior generalization in unseen scenarios by achieving nearly three times the success rate of leading baselines, validating that a minimalist, autonomy-centric paradigm captures more robust visual-motor representations than complex modular systems.
           </p>
         </div>
       </div>
@@ -147,7 +151,7 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{xu2026aerialvla,
-  title={AerialVLA: A Vision-Language-Action Model for UAV Navigation via Minimalist End-to-End Control},
+  title={AeroVLA: A Vision-Language-Action Model for UAV Navigation via Minimalist End-to-End Control},
   author={Xu, Peng and Deng, Zhengnan and Deng, Jiayan and Gu, Zonghua and Wan, Shaohua},
   journal={arXiv preprint arXiv:2603.14363},
   year={2026}
