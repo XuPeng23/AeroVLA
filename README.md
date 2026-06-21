@@ -1,7 +1,7 @@
 # AeroVLA (formerly known as AerialVLA): A Vision-Language-Action Model for UAV Navigation via Minimalist End-to-End Control
 
 <p align="center">
-  <img src="docs/assets/teaser_figure.png" width="1000" title="AerialVLA">
+  <img src="docs/assets/teaser_figure.png" width="1000" title="AeroVLA">
 </p>
 
 ![Teaser](docs/assets/AerialVLA_Demo_2.gif)
@@ -13,6 +13,7 @@ Vision-Language Navigation (VLN) for Unmanned Aerial Vehicles (UAVs) demands com
 
 ## 🚀 News & Updates
 
+  - **[2026-06]** **Our paper has been accepted to ECCV 2026!** Please note that the project has been officially renamed from *AerialVLA* to **AeroVLA**.
   - **[2026-04]** AerialVLA evaluation code and pre-trained LoRA weights are officially released!
 
 ## 🛠️ Installation
@@ -20,15 +21,15 @@ Vision-Language Navigation (VLN) for Unmanned Aerial Vehicles (UAVs) demands com
 **1. Clone the repository:**
 
 ```bash
-git clone https://github.com/XuPeng23/AerialVLA.git
+git clone https://github.com/XuPeng23/AeroVLA.git
 cd AerialVLA
 ```
 
 **2. Create a Conda environment and activate it:**
 
 ```bash
-conda create -n aerial_vla python=3.10 -y
-conda activate aerial_vla
+conda create -n aero_vla python=3.10 -y
+conda activate aero_vla
 ```
 
 **3. Install PyTorch:**
@@ -130,7 +131,7 @@ We are continuously working on improving AerialVLA and pushing it towards real-w
 
 ## ⭐ Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=XuPeng23/AerialVLA&type=Date)](https://star-history.com/#XuPeng23/AerialVLA&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=XuPeng23/AerialVLA&type=Date)](https://star-history.com/#XuPeng23/AeroVLA&Date)
 
 
 ## 📄 License
