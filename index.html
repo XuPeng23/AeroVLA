@@ -101,7 +101,11 @@
             <img src="docs/assets/pipeline.png" alt="AeroVLA Pipeline Architecture" class="pipeline-img">
           </figure>
           <p>
-            <strong>The AeroVLA Architecture.</strong> Our framework takes a streamlined dual-view RGB observation (front and downward cameras) and a fuzzy directional text prompt as inputs. By bypassing complex modular mapping and external object detectors, the underlying VLA backbone directly autoregressively decodes these multi-modal inputs into continuous 3-DoF kinematic commands (forward/vertical displacements and yaw changes) alongside a discrete <code>LAND</code> token. This minimalist end-to-end design significantly mitigates causal confusion and enhances flight robustness in unseen open environments.
+            <strong>The architecture of AeroVLA.</strong> The framework processes multimodal inputs to generate continuous control signals end-to-end. 
+            <strong>(a) Language Input</strong> constructs prompts with fuzzy directional hints derived from the IMU, eliminating oracle reliance. 
+            <strong>(b) Visual Input</strong> fuses front and down views via a vertical mosaic. 
+            <strong>(c) The AeroVLA Model</strong> utilizes a Llama-2 backbone with LoRA to autoregressively predict numerical tokens. 
+            <strong>(d) Output and Action Stage</strong> decodes tokens into spatial offsets for velocity control, or triggers the dual-condition landing.
           </p>
         </div>
       </div>
