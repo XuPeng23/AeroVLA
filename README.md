@@ -22,7 +22,7 @@ Vision-Language Navigation (VLN) for Unmanned Aerial Vehicles (UAVs) demands com
 
 ```bash
 git clone https://github.com/XuPeng23/AeroVLA.git
-cd AerialVLA
+cd AeroVLA
 ```
 
 **2. Create a Conda environment and activate it:**
