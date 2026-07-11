@@ -51,7 +51,7 @@ echo "Save Dir:      $SAVE_DIR"
 echo "========================================================"
 
 # --------------------------------------------------
-CUDA_VISIBLE_DEVICES=$GPU_ID python -u $PROJECT_ROOT/src/vlnce_src/eval_aerialvla.py \
+CUDA_VISIBLE_DEVICES=$GPU_ID python -u $PROJECT_ROOT/src/vlnce_src/eval_aerovla.py \
     --run_type eval \
     --name AerialVLA_Eval \
     --gpu_id $GPU_ID \
