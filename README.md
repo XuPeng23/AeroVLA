@@ -13,6 +13,7 @@ Vision-Language Navigation (VLN) for Unmanned Aerial Vehicles (UAVs) demands com
 
 ## 🚀 News & Updates
 
+  - **[2026-07]** 🔥 **Training code and training dataset are officially released!** You can now train your own AeroVLA models.
   - **[2026-06]** **Our paper has been accepted to ECCV 2026!** Please note that the project has been officially renamed from *AerialVLA* to **AeroVLA**.
   - **[2026-04]** AerialVLA evaluation code and pre-trained LoRA weights are officially released!
 
@@ -69,6 +70,7 @@ AerialVLA uses the Unreal Engine-based AirSim simulator and the dataset provided
 
 1.  **Base Model:** AerialVLA is built upon `openvla-7b`. You can download the base weights from Hugging Face and place them in the `./openvla-7b` directory.
 2.  **AerialVLA LoRA Weights:** Download our pre-trained LoRA weights from our **[Hugging Face Repository](https://huggingface.co/XuPeng23/AerialVLA)** and place them in `./checkpoints/aerial_vla/`.
+3.  **Training Dataset**: Download aerovla_train_dataset.json from the same Hugging Face repository and place it in the ./data/ directory for training.
 
 ## 📁 Project Structure
 
@@ -78,7 +80,8 @@ AerialVLA/
 ├── checkpoints/
 ├── data/                 
 │   ├── meta/             
-│   └── uav_dataset/      
+│   ├── uav_dataset/
+│   └── aerovla_train_dataset.json   
 ├── dataset_raw/
 │   ├── BattlefieldKitDesert/     
 │   ├── BrushifyCountryRoads/   
@@ -95,8 +98,24 @@ AerialVLA/
 │   └── metric.sh         
 ├── src/
 │   ├── model_wrapper/
-│   └── vlnce_src/
+│   ├── vlnce_src/
+│   ├── aerovla_dataset.py
+│   └── train_aerovla.py   
 └── utils/                
+```
+
+## 🏋️‍♂️ Training
+**1. Prepare the Dataset:**
+Ensure you have downloaded aerovla_train_dataset.json from our Hugging Face repository and placed it inside the data/ directory.
+
+**2. Configure Training Parameters:**
+You can modify the training hyperparameters (e.g., learning rate, batch size, epochs) directly inside src/train_aerovla.py.
+
+**3. Start Training:**
+Run the provided training script to start fine-tuning:
+
+```bash
+bash scripts/train.sh
 ```
 
 ## 🏃‍♂️ Evaluation
@@ -125,7 +144,7 @@ bash scripts/metric.sh aerial_vla
 We are continuously working on improving AerialVLA and pushing it towards real-world applications.
 
 - [x] Release inference code and pre-trained weights.
-- [ ] Release the training code and curated trainset.
+- [x] Release the training code and curated trainset.
 - [ ] Hardware Deployment: Deploy AerialVLA on real-world UAVs for physical testing.
 
 
