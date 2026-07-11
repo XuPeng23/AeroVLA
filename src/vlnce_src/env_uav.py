@@ -16,7 +16,7 @@ import tqdm
 from src.common.param import args
 from utils.logger import logger
 sys.path.append(str(Path(str(os.getcwd())).resolve()))
-from airsim_plugin.AirVLNSimulatorClientTool_AerialVLA import AirVLNSimulatorClientTool
+from airsim_plugin.AirVLNSimulatorClientTool_AeroVLA import AirVLNSimulatorClientTool
 from utils.env_utils_uav import SimState
 from utils.env_vector_uav import VectorEnvUtil
 RGB_FOLDER = ['frontcamera', 'leftcamera', 'rightcamera', 'rearcamera', 'downcamera']
