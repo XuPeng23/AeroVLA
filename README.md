@@ -9,7 +9,7 @@
 🔥 **[Check out our Project Page for more demo videos and qualitative results!](https://xupeng23.github.io/AeroVLA)**
 
 ## 📖 Abstract
-Vision-Language Navigation (VLN) for Unmanned Aerial Vehicles (UAVs) demands complex visual interpretation and continuous control in dynamic 3D environments. Existing hierarchical approaches rely on dense oracle guidance or auxiliary object detectors, creating semantic gaps and limiting genuine autonomy. We propose AerialVLA, a minimalist end-to-end Vision-Language-Action framework mapping raw visual observations and fuzzy linguistic instructions directly to continuous physical control signals. First, we introduce a streamlined dual-view perception strategy that reduces visual redundancy while preserving essential cues for forward navigation and precise grounding, which additionally facilitates future simulation-to-reality transfer. To reclaim genuine autonomy, we deploy a fuzzy directional prompting mechanism derived solely from onboard sensors, completely eliminating the dependency on dense oracle guidance. Ultimately, we formulate a unified control space that integrates continuous 3-Degree-of-Freedom (3-DoF) kinematic commands with an intrinsic landing signal, freeing the agent from external object detectors for precision landing. Extensive experiments on the TravelUAV benchmark demonstrate that AerialVLA achieves state-of-the-art performance in seen environments. Furthermore, it exhibits superior generalization in unseen scenarios by achieving nearly three times the success rate of leading baselines, validating that a minimalist, autonomy-centric paradigm captures more robust visual-motor representations than complex modular systems.
+Vision-Language Navigation (VLN) for Unmanned Aerial Vehicles (UAVs) demands complex visual interpretation and continuous control in dynamic 3D environments. Existing hierarchical approaches rely on dense oracle guidance or auxiliary object detectors, creating semantic gaps and limiting genuine autonomy. We propose AeroVLA, a minimalist end-to-end Vision-Language-Action framework mapping raw visual observations and fuzzy linguistic instructions directly to continuous physical control signals. First, we introduce a streamlined dual-view perception strategy that reduces visual redundancy while preserving essential cues for forward navigation and precise grounding, which additionally facilitates future simulation-to-reality transfer. To reclaim genuine autonomy, we deploy a fuzzy directional prompting mechanism derived solely from onboard sensors, completely eliminating the dependency on dense oracle guidance. Ultimately, we formulate a unified control space that integrates continuous 3-Degree-of-Freedom (3-DoF) kinematic commands with an intrinsic landing signal, freeing the agent from external object detectors for precision landing. Extensive experiments on the TravelUAV benchmark demonstrate that AeroVLA achieves state-of-the-art performance in seen environments. Furthermore, it exhibits superior generalization in unseen scenarios by achieving nearly three times the success rate of leading baselines, validating that a minimalist, autonomy-centric paradigm captures more robust visual-motor representations than complex modular systems.
 
 ## 🚀 News & Updates
 
@@ -53,7 +53,7 @@ pip install -r requirements.txt
 
 ## 🌍 Data & Simulation Environment
 
-AerialVLA uses the Unreal Engine-based AirSim simulator and the dataset provided by the TravelUAV benchmark. You do not need to install AirSim separately; simply download the compiled environment binaries.
+AeroVLA uses the Unreal Engine-based AirSim simulator and the dataset provided by the TravelUAV benchmark. You do not need to install AirSim separately; simply download the compiled environment binaries.
 
 1.  Follow the [TravelUAV Official Documentation](https://github.com/prince687028/TravelUAV/tree/main) to download the dataset (`dataset_raw`) and the simulation environments (`envs`).
 
@@ -68,14 +68,14 @@ AerialVLA uses the Unreal Engine-based AirSim simulator and the dataset provided
 
 ## 📥 Checkpoints
 
-1.  **Base Model:** AerialVLA is built upon `openvla-7b`. You can download the base weights from Hugging Face and place them in the `./openvla-7b` directory.
-2.  **AerialVLA LoRA Weights:** Download our pre-trained LoRA weights from our **[Hugging Face Repository](https://huggingface.co/XuPeng23/AerialVLA)** and place them in `./checkpoints/aerial_vla/`.
+1.  **Base Model:** AeroVLA is built upon `openvla-7b`. You can download the base weights from Hugging Face and place them in the `./openvla-7b` directory.
+2.  **AeroVLA LoRA Weights:** Download our pre-trained LoRA weights from our **[Hugging Face Repository](https://huggingface.co/XuPeng23/AerialVLA)** and place them in `./checkpoints/aerial_vla/`.
 3.  **Training Dataset**: Download aerovla_train_dataset.json from the same Hugging Face repository and place it in the ./data/ directory for training.
 
 ## 📁 Project Structure
 
 ```text
-AerialVLA/
+AeroVLA/
 ├── airsim_plugin/
 ├── checkpoints/
 ├── data/                 
@@ -94,7 +94,7 @@ AerialVLA/
 ├── eval_results/         
 ├── openvla-7b/
 ├── scripts/
-│   ├── eval_aerialvla.sh 
+│   ├── eval_aerovla.sh 
 │   └── metric.sh         
 ├── src/
 │   ├── model_wrapper/
@@ -121,13 +121,13 @@ bash scripts/train.sh
 ## 🏃‍♂️ Evaluation
 
 **1. Run Closed-Loop Evaluation:**
-To evaluate AerialVLA on a specific map, modify the `TASK_ID` in `scripts/eval_aerialvla.sh` and run:
+To evaluate AeroVLA on a specific map, modify the `TASK_ID` in `scripts/eval_aerovla.sh` and run:
 
 ```bash
-bash scripts/eval_aerialvla.sh
+bash scripts/eval_aerovla.sh
 ```
 
-*The model wrapper (`aerialvla_wrapper_ui.py`) includes a UI feature that displays real-time dual-view perception, dynamic prompts, and continuous action outputs during inference.*
+*The model wrapper (`aerovla_wrapper_ui.py`) includes a UI feature that displays real-time dual-view perception, dynamic prompts, and continuous action outputs during inference.*
 
 **2. Calculate Metrics:**
 Once the evaluation is complete, compute the aggregated metrics (SR, OSR, NE, SPL) by running:
@@ -141,16 +141,16 @@ bash scripts/metric.sh aerial_vla
 
 ## 📋 TODO List
 
-We are continuously working on improving AerialVLA and pushing it towards real-world applications.
+We are continuously working on improving AeroVLA and pushing it towards real-world applications.
 
 - [x] Release inference code and pre-trained weights.
 - [x] Release the training code and curated trainset.
-- [ ] Hardware Deployment: Deploy AerialVLA on real-world UAVs for physical testing.
+- [ ] Hardware Deployment: Deploy AeroVLA on real-world UAVs for physical testing.
 
 
 ## ⭐ Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=XuPeng23/AerialVLA&type=Date)](https://star-history.com/#XuPeng23/AeroVLA&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=XuPeng23/AeroVLA&type=Date)](https://star-history.com/#XuPeng23/AeroVLA&Date)
 
 
 ## 📄 License
