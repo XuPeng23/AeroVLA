@@ -2,7 +2,7 @@
 
 # Configuration ------------------------------------
 PROJECT_ROOT="."
-MODEL_DIR="$PROJECT_ROOT/checkpoints/aerial_vla"
+MODEL_DIR="$PROJECT_ROOT/checkpoints/aero_vla"
 EXP_NAME=$(basename "$MODEL_DIR")
 
 # [SEEN] ----------------------------------
