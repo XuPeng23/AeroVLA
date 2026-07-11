@@ -8,7 +8,7 @@ import tqdm
 sys.path.append(str(Path(str(os.getcwd())).resolve()))
 from utils.logger import logger
 from utils.utils import *
-from src.model_wrapper.aerialvla_wrapper_ui import AerialVLAWrapper
+from src.model_wrapper.aerovla_wrapper_ui import AerialVLAWrapper
 from src.model_wrapper.base_model import BaseModelWrapper
 from src.common.param import args, model_args, data_args
 from env_uav import AirVLNENV
