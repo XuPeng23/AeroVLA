@@ -133,10 +133,10 @@ bash scripts/eval_aerovla.sh
 Once the evaluation is complete, compute the aggregated metrics (SR, OSR, NE, SPL) by running:
 
 ```bash
-bash scripts/metric.sh aerial_vla
+bash scripts/metric.sh aero_vla
 ```
 
-*The results will be saved in `eval_results/aerial_vla/evaluation_detailed.csv` and `evaluation_summary_aggregated.csv`.*
+*The results will be saved in `eval_results/aero_vla/evaluation_detailed.csv` and `evaluation_summary_aggregated.csv`.*
 
 
 ## 📋 TODO List
