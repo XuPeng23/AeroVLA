@@ -161,10 +161,11 @@ This project is licensed under the **Apache License 2.0**. See the [LICENSE](LIC
 If you find our work helpful for your research, please consider citing our paper:
 
 ```bibtex
-@article{xu2026aerialvla,
-  title={AerialVLA: A Vision-Language-Action Model for UAV Navigation via Minimalist End-to-End Control},
+@inproceedings{xu2026aerovla,
+  title={{AeroVLA}: A Vision-Language-Action Model for {UAV} Navigation via Minimalist End-to-End Control},
   author={Xu, Peng and Deng, Zhengnan and Deng, Jiayan and Gu, Zonghua and Wan, Shaohua},
-  journal={arXiv preprint arXiv:2603.14363},
-  year={2026}
+  booktitle={European Conference on Computer Vision (ECCV)},
+  year={2026},
+  note={To appear}
 }
 ```
