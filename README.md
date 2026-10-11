@@ -118,6 +118,12 @@ Run the provided training script to start fine-tuning:
 bash scripts/train.sh
 ```
 
+> **⚠️ Reproducibility Warning: Optimizer Precision:**
+> 
+> To strictly reproduce our baseline metrics, please ensure your Optimizer States are kept in FP32 during fine-tuning. We observed that forcing pure BF16 globally (i.e., downgrading optimizer states to BF16) causes gradient underflow and noticeably degrades final performance.
+> 
+> (Note: In our experiments, we used DeepSpeed, which automatically maintains FP32 optimizer states under the hood when bf16 is enabled. If you are using custom setups or single-GPU training, please verify your mixed-precision configurations accordingly.)
+
 ## 🏃‍♂️ Evaluation
 
 **1. Run Closed-Loop Evaluation:**
