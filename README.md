@@ -171,7 +171,7 @@ We are continuously working on improving AeroVLA and pushing it towards real-wor
 
 ## ⭐ Star History
 
-[![Star History Chart](./docs/assets/star-history.png)](https://star-history.com/#XuPeng23/AeroVLA&Timeline)
+[![Star History Chart](./docs/assets/star-history-20261027.png)](https://star-history.com/#XuPeng23/AeroVLA&Timeline)
 
 ## 📄 License
 
