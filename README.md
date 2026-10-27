@@ -35,10 +35,17 @@ conda activate aero_vla
 
 **3. Install PyTorch:**
 
-> *Note: The following command is for CUDA 11.8. Please adjust it according to your local CUDA version.*
+> *⚠️ Note: The following command is for CUDA 11.8. Please adjust it according to your local CUDA version.*
 
 ```bash
 pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 --index-url https://download.pytorch.org/whl/cu118
+```
+
+> *⚠️ Note: If you are using a Blackwell GPU, I recommend the following torch version:*
+
+```bash
+pip install torch==2.7.0 --index-url https://download.pytorch.org/whl/cu128
+pip install torchvision==0.22.0 --index-url https://download.pytorch.org/whl/cu128
 ```
 
 **4. Install the required dependencies:**
