@@ -47,6 +47,14 @@ pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 --index-url https
 pip install -r requirements.txt
 ```
 
+**5. Install AirSim & other packages**
+
+```bash
+pip install [flash_attn.whl] (Download the version suitable for your experimental equipment)
+pip install msgpack-rpc-python-fix-msgpack-dep.zip
+pip install airsim --no-build-isolation
+```
+
 > **⚠️ Note:**
 > If you experience extremely slow evaluation speeds (e.g., `simGetImages` takes >4s per step), it is likely due to an AirSim RPC communication bug. Please refer to our [Troubleshooting Guide](docs/assets/troubleshooting.md) for a quick fix.
 
