@@ -6,14 +6,13 @@ accelerate==0.32.1
 bitsandbytes==0.43.1
 timm==0.9.10
 einops==0.6.1
-flash-attn==2.5.8
-airsim==1.8.1
-msgpack-rpc-python==0.4
 tornado==4.5.3
 numpy==1.26.3
 scipy==1.15.0
-opencv-python==4.10.0.84
+opencv-contrib-python==4.10.0.84
 Pillow==10.2.0
 tqdm==4.67.1
 yacs==0.1.8
 psutil==6.1.1
+numba==0.68.0
+attrs==26.1.0
