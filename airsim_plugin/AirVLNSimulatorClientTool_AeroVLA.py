@@ -351,7 +351,9 @@ class AirVLNSimulatorClientTool:
 
             if need_horizontal_move or need_vertical_move or need_yaw_adjust:
                 
-                airsim_client.rotateToYawAsync(target_yaw_deg, timeout_sec=3, margin=5).join()
+                # Rotate first only for large turns or in-place turns; small-yaw moves turn via moveByVelocityAsync's yaw_mode.
+                if abs(pred_yaw) >= YAW_THRESHOLD or total_dist <= EPSILON:
+                    airsim_client.rotateToYawAsync(target_yaw_deg, timeout_sec=3, margin=5).join()
                 
                 if abs(pred_yaw) < YAW_THRESHOLD:
                     
